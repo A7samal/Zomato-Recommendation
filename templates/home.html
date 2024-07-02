@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorQuest</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #1f1f1f;
+        }
+
+        .logo h1 {
+            margin: 0;
+            color: #00aaff;
+            font-size: 24px;
+        }
+
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav ul li {
+            margin-left: 20px;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav ul li a:hover {
+            color: #00aaff;
+        }
+
+        .home, .about, .reviews, .availability, .recommendations {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .home {
+            background: linear-gradient(135deg, #1a1a1a 0%, #1f1f1f 100%);
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about, .reviews, .availability, .recommendations {
+            background-color: #1a1a1a;
+        }
+
+        .home-content h2, .about-content h2, .reviews-content h2, .availability-content h2, .recommendations-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #00aaff;
+        }
+
+        .home-content p, .about-content p, .reviews-content p, .availability-content p, .recommendations-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #00aaff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0077cc;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1f1f1f;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .icon {
+            font-size: 50px;
+            margin: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        .icon-food {
+            color: #ff6347;
+        }
+
+        .icon-location {
+            color: #00aaff;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .floating-food {
+            position: absolute;
+            font-size: 30px;
+            animation: float 5s infinite;
+        }
+
+        .floating-food:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-food:nth-child(2) {
+            top: 50%;
+            left: 25%;
+            animation-delay: 1s;
+        }
+
+        .floating-food:nth-child(3) {
+            top: 70%;
+            left: 40%;
+            animation-delay: 2s;
+        }
+
+        .floating-food:nth-child(4) {
+            top: 40%;
+            left: 70%;
+            animation-delay: 3s;
+        }
+
+        .floating-food:nth-child(5) {
+            top: 20%;
+            left: 80%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(-20px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>FlavorQuest</h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#availability">Availability</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-content">
+            <h2>Welcome to FlavorQuest</h2>
+            <p>Your ultimate guide to discovering the best restaurants around you.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+        <div class="icon-container">
+            <i class="fas fa-utensils icon icon-food"></i>
+            <i class="fas fa-map-marker-alt icon icon-location"></i>
+        </div>
+        <div class="floating-food"><i class="fas fa-hamburger"></i></div>
+        <div class="floating-food"><i class="fas fa-pizza-slice"></i></div>
+        <div class="floating-food"><i class="fas fa-ice-cream"></i></div>
+        <div class="floating-food"><i class="fas fa-drumstick-bite"></i></div>
+        <div class="floating-food"><i class="fas fa-fish"></i></div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About FlavorQuest</h2>
+            <p>FlavorQuest is dedicated to helping you find the perfect dining experience. Whether you're looking for reviews or availability, we've got you covered.</p>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="reviews-content">
+            <h2>Restaurant Reviews</h2>
+            <p>Discover the best places to eat with our detailed reviews from food enthusiasts.</p>
+        </div>
+    </section>
+
+    <section id="availability" class="availability">
+        <div class="availability-content">
+            <h2>Check Availability</h2>
+            <p>Find out if your favorite restaurants have available tables.</p>
+        </div>
+    </section>
+
+    <section id="recommendations" class="recommendations">
+        <div class="recommendations-content">
+            <h2>Get Recommendations</h2>
+            <p>Explore our recommended restaurants based on popular cuisines and dining preferences.</p>
+            <a href="/recommend" class="btn">Recommendation</a>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <p>&copy; 2024 FlavorQuest. All rights reserved.</p>
+    </footer>
+</body>
+</html>
